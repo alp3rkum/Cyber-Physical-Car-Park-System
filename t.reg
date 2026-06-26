@@ -1,0 +1,27 @@
+Windows Registry Editor Version 5.00
+
+; --- 1. Klasör Üzerine Sağ Tıklandığında Çıkan Seçenek ---
+[HKEY_CLASSES_ROOT\Directory\shell\CustomApp]
+@="Program Adı ile Aç"
+"Icon"="\"C:\\PROGRAM_YOLU\\program.exe\",0"
+
+[HKEY_CLASSES_ROOT\Directory\shell\CustomApp\command]
+@="\"C:\\PROGRAM_YOLU\\program.exe\" \"%1\""
+
+
+; --- 2. Klasörün İçindeki Boşluğa Sağ Tıklandığında Çıkan Seçenek ---
+[HKEY_CLASSES_ROOT\Directory\Background\shell\CustomApp]
+@="Burayı Program ile Aç"
+"Icon"="\"C:\\PROGRAM_YOLU\\program.exe\",0"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\CustomApp\command]
+@="\"C:\\PROGRAM_YOLU\\program.exe\" \"%V\""
+
+
+; --- 3. Herhangi Bir Dosyaya Sağ Tıklandığında Çıkan Seçenek ---
+[HKEY_CLASSES_ROOT\*\shell\CustomApp]
+@="Dosyayı Program ile Aç"
+"Icon"="\"C:\\PROGRAM_YOLU\\program.exe\",0"
+
+[HKEY_CLASSES_ROOT\*\shell\CustomApp\command]
+@="\"C:\\PROGRAM_YOLU\\program.exe\" \"%1\""
